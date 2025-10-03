@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下班時間計算器</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="bg-body-tertiary">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                
+                <div class="card shadow-lg border-light">
+                    <div class="card-header bg-dark text-white text-center">
+                        <h2>工作結束時間計算</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="calculationForm">
+                            <div class="mb-3">
+                                <label for="startTime" class="form-label">上班時間（小時:分鐘）</label>
+                                <input type="time" class="form-control form-control-lg" id="startTime" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="breakDuration" class="form-label">中午休息時長（小時，如 0.5 或 1.0）</label>
+                                <input type="number" step="0.5" min="0" value="1.5" class="form-control form-control-lg" id="breakDuration" required>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="workDuration" class="form-label">每日工作時長（小時，通常是 8）</label>
+                                <input type="number" min="0" value="8" class="form-control form-control-lg" id="workDuration" required>
+                            </div>
+                            
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">計算下班時間</button>
+                            </div>
+                        </form>
+                        
+                        <div id="resultOutput" class="alert alert-success mt-4 p-4 text-center d-none">
+                            <h4>預計下班時間是：<strong id="endTimeDisplay"></strong></h4>
+                        </div>
+
+                    </div>
+                    <div class="card-footer text-center text-muted small">
+                        設計於 Dark Mode
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

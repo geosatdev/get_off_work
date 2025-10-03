@@ -1,0 +1,16 @@
+/* style.css */
+
+/* 讓主體背景在 Dark Mode 時更深一點（可選） */
+body[data-bs-theme="dark"] {
+    background-color: #121212 !important; /* 更深的暗色 */
+}
+
+/* 讓卡片更突出 */
+.card {
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* 滑鼠懸停時微抬，增加互動感 */
+}
