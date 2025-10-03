@@ -1,16 +1,38 @@
 /* style.css */
 
-/* 讓主體背景在 Dark Mode 時更深一點（可選） */
-body[data-bs-theme="dark"] {
-    background-color: #121212 !important; /* 更深的暗色 */
+/* 讓背景在 Dark Mode 時更一致、更深邃 */
+body {
+    background-color: #0d1117 !important; /* GitHub Dark Mode 的深色背景 */
 }
 
-/* 讓卡片更突出 */
+/* 卡片美化 */
 .card {
-    border-radius: 15px;
-    transition: transform 0.3s ease-in-out;
+    border-radius: 12px;
+    background-color: #161b22; /* 比背景稍亮，製造層次感 */
+    transition: all 0.3s ease-in-out;
 }
 
-.card:hover {
-    transform: translateY(-5px); /* 滑鼠懸停時微抬，增加互動感 */
+.card-header {
+    border-bottom: 1px solid #30363d;
+}
+
+/* 結果區塊樣式調整 */
+#resultOutput.alert-success {
+    background-color: #1f3d2f; /* Dark Mode 友善的綠色背景 */
+    color: #4cd964; /* 亮綠色文字 */
+    border-color: #2e7d32;
+    border-radius: 8px;
+}
+
+/* 自定義按鈕樣式，讓它在暗黑模式下更突出 */
+.custom-button {
+    background-image: linear-gradient(to right, #4CAF50, #2E8B57); /* 綠色漸變 */
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+.custom-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
 }
